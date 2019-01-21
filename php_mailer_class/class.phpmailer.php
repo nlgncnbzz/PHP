@@ -622,7 +622,7 @@ class PHPMailer {
         throw new phpmailerException($this->Lang('execute') . $this->Sendmail, self::STOP_CRITICAL);
       }
       fputs($mail, $header);
-      fputs($mail, $body);
+      fputs($mail, $body); 
       $result = pclose($mail);
       // implement call back function if it exists
       $isSent = ($result == 0) ? 1 : 0;
